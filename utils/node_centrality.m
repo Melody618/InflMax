@@ -9,6 +9,6 @@ function  [node, c] = node_centrality(net_mat, type, k)
 %   c: centrality of each node 1 * N
 
     c = centrality(graph(net_mat), type);
-    [~, node] = sort(c);
+    [~, node] = sort(c, 'descend');
     node = node(1:k);
 end
